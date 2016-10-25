@@ -1,0 +1,70 @@
+{
+    "categories": [
+        {
+            "url": "http://coolapk.com/apk/com.by_syk.cooldp?t=comment&p={page:1}",
+            "title": "酷安日图",
+            "cid": 1
+        },
+        {
+            "url": "http://coolapk.com/apk/com.teslacoilsw.launcher?t=comment&p={page:1}",
+            "title": "nova桌面",
+            "cid": 2
+        }
+    ],
+    "flag": "preloadGallery|noRating|noTag",
+    "galleryRule": { 
+        "item": {
+            "selector": "img.preview"
+        },
+        "pictureThumbnail": {
+            "fun": "attr",
+            "param": "src",
+            "regex": "(.*).m.jpg",
+            "replacement": "$1.s.jpg",
+            "selector": "img.preview"
+        },
+        "pictureUrl": {
+            "fun": "attr",
+            "param": "src",
+            "selector": "img.preview"
+        }
+    },
+    "galleryUrl": "http://coolapk.com/feed/{idCode:}",
+    "indexRule": { 
+        "cover": {
+            "fun": "attr",
+            "param": "src",
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.ex-card-extend > div > div.ex-card-thumbView > img"
+        },
+        "item": {
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed"
+        },
+        "datetime": {
+            "fun": "html",
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > span.dateline > a"
+        },
+        "description": {
+            "fun": "html",
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.ex-card-content"
+        },
+        "title": {
+            "fun": "html",
+            "regex": "(.*)",
+            "replacement": "'$1' 的评论",
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > a.username"
+        },
+        "uploader": {
+            "fun": "html",
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > a.username"
+        },
+        "idCode": {
+            "fun": "attr",
+            "param": "id",
+            "regex": "feed-(\\d*)",
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed"
+        }
+    },
+    "indexUrl": "http://coolapk.com/apk/com.by_syk.cooldp?t=comment&p={page:1}",
+    "sid": 199,
+    "title": "酷安评论"
+}
