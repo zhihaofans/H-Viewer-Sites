@@ -34,6 +34,36 @@
             "url": "http://www.apic.in/fuli/page/{page:1}",
             "title": "福利包",
             "cid": 7
+        },
+        {
+            "url": "http://www.apic.in/furu/page/{page:1}",
+            "title": "巨乳",
+            "cid": 8
+        },
+        {
+            "url": "http://www.apic.in/baihe/page/{page:1}",
+            "title": "百合",
+            "cid": 9
+        },
+        {
+            "url": "http://www.apic.in/jueduilingyu/page/{page:1}",
+            "title": "绝对领域",
+            "cid": 10
+        },
+        {
+            "url": "http://www.apic.in/pangci/page/{page:1}",
+            "title": "胖次",
+            "cid": 11
+        },
+        {
+            "url": "http://www.apic.in/zukongfuli/page/{page:1}",
+            "title": "足控",
+            "cid": 12
+        },
+        {
+            "url": "http://www.apic.in/zhifu/lolikong/page/{page:1}",
+            "title": "萝莉控",
+            "cid": 13
         }
     ],
     "flag": "preloadGallery|noRating",
@@ -88,7 +118,6 @@
         "title": {
             "fun": "attr",
             "param": "title",
-            "regex": "(.*)-A区",
             "selector": "div.loop > h2 > a"
         }
     },
