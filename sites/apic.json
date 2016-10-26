@@ -66,7 +66,7 @@
             "cid": 13
         }
     ],
-    "flag": "preloadGallery|noRating",
+    "flag": "preloadGallery|noRating|waterfallAsList",
     "galleryRule": {
         "datetime": {
             "fun": "html",
@@ -150,6 +150,6 @@
         }
     },
     "searchUrl": "http://www.apic.in/{pageStr:page/{page:1}/}?s={keyword:}",
-    "sid": 99,
+    "sid": 1,
     "title": "A区"
 }
