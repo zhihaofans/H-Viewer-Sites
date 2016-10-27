@@ -145,7 +145,7 @@
         "title": {
             "fun": "attr",
             "param": "title",
-            "regex": "(.*)-A区",
+            "regex": "(.*)",
             "selector": "div.loop > h2 > a"
         }
     },
