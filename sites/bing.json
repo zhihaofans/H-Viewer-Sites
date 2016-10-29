@@ -1,0 +1,46 @@
+{
+    "flag": "postIndex|jsNeededGallery|noRating|noTitle",
+    "cookie": "",
+    "isGrid": false,
+    "galleryRule": { 
+        "pictureRule": {
+            "item": {
+                "selector": "img"
+            },
+            "thumbnail": {
+                "fun": "attr",
+                "param": "src",
+                "selector": "this"
+            },
+            "url": {
+                "fun": "attr",
+                "param": "src",
+                "selector": "this"
+            }
+        }
+    },
+    "galleryUrl": "http://s.cn.bing.net/az/hprichbg/rb/{idCode:}.jpg",
+    "indexRule": { 
+        "cover": {
+            "path": "$.url",
+            "regex": "(.*)",
+            "replacement": "https://www.bing.com$1"
+        },
+        "item": {
+            "path": "$.images"
+        },
+        "datetime": {
+            "path": "$.startdate"
+        },
+        "description": {
+            "path": "$.copyright"
+        },
+        "idCode": {
+            "regex": "/az/hprichbg/rb/(.*)",
+            "path": "$.urlbase"
+        }
+    },
+    "indexUrl": "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=2222&mkt=en-WW",
+    "sid": 4,
+    "title": "必应壁纸"
+}
