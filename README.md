@@ -1,6 +1,8 @@
 # H-Viewer.sites
 ------
-安卓图册阅览器 [`H-Viewer`](https://github.com/PureDark/H-Viewer)的站点配置文件
+网站建议提交请前往 [issues](https://github.com/zhihaofans/H-Viewer.sites/issues/new)(可提交网站:壁纸网站、动漫图片网站，请在提交前点击下面`站点配置文件`链接查看是否有人做了)
+
+安卓图册阅览器 [`H-Viewer`](https://github.com/PureDark/H-Viewer)的[站点配置文件](https://github.com/H-Viewer-Sites/Index)
 
 |  ID  | Site's Json  | QR Code | Author | Update date |
 | ---- | ------------- | ------------- | ------------- | ------------- |
