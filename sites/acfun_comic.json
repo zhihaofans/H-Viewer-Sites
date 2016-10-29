@@ -1,0 +1,59 @@
+{    
+    "flag": "preloadGallery|noRating|noCover",
+    "galleryRule": {
+        "pictureRule": {
+            "item": {
+                "selector": "div#area-player > p > img"
+            },
+            "thumbnail": {
+                "fun": "attr",
+                "param": "src",
+                "selector": "this"
+            },
+            "url": {
+                "fun": "attr",
+                "param": "src",
+                "selector": "this"
+            }
+        },
+        "tags": {
+            "fun": "attr",
+            "param": "href",
+            "regex": "/search/#query=(\\d*)",
+            "selector": "span.tag > a"
+        }
+    },
+    "galleryUrl": "http://www.acfun.tv/a/ac{idCode:}",
+    "indexRule": {
+        "idCode": {
+            "fun": "attr",
+            "param": "href",
+            "regex": "/a/ac(\\d*)",
+            "selector": "a.title"
+        },
+        "item": {
+            "selector": "div.area-inner > div.l > div#block-content-article > div.mainer > div.item"
+        },
+        "datetime": {
+            "fun": "attr",
+            "param": "title",
+            "regex": "(\\d{4}-\\d{1,2}-\\d{1,2} \\d{2}:\\d{2}:\\d{2})",
+            "selector": "a.title"
+        },
+        "title": {
+            "fun": "html",
+            "selector": "a.title"
+        },
+        "description": {
+            "fun": "html",
+            "selector": "div.desc"
+        },
+        "uploader": {
+            "fun": "html",
+            "selector": "p.article-info > a.name"
+        }
+    },
+    "indexUrl": "http://www.acfun.tv/v/list75/index{pageStr:_{page:1}}.htm",
+    "sid": 3,
+    "title": "acfun漫画"
+}
