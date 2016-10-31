@@ -93,6 +93,6 @@
         }
     },
     "searchUrl": "http://api.zhihaofans.com/acfun/comic/?search={keyword:}&page={page:1}",
-    "sid": 4,
+    "sid": 3,
     "title": "ACfun漫画"
 }
