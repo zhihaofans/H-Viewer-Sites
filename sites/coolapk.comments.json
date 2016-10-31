@@ -1,69 +1,95 @@
-    {
-        "categories": [
-            {
-                "url": "http://coolapk.com/apk/com.by_syk.cooldp?t=comment&p={page:1}",
-                "title": "酷安日图",
-                "cid": 1
+{
+    "categories": [
+        {
+            "url": "http://coolapk.com/apk/com.by_syk.cooldp?t=comment&p={page:1}",
+            "title": "酷安日图",
+            "cid": 1
+        },
+        {
+            "url": "http://coolapk.com/apk/com.teslacoilsw.launcher?t=comment&p={page:1}",
+            "title": "nova桌面",
+            "cid": 2
+        },
+        {
+            "url": "http://coolapk.com/apk/cn.zhj.hydrogenwallpager?t=comment&p={page:1}",
+            "title": "氢壁纸",
+            "cid": 3
+        }
+    ],
+    "flag": "preloadGallery|noRating|noTag|noTitle|waterfallAsList|onePicGallery",
+    "galleryRule": { 
+        "commentRule": { 
+            "item": {
+                "selector": "ul.media-list.ex-card-comment-list > li.media"
             },
-            {
-                "url": "http://coolapk.com/apk/com.teslacoilsw.launcher?t=comment&p={page:1}",
-                "title": "nova桌面",
-                "cid": 2
+            "avatar": {
+                "fun": "attr",
+                "param": "src",
+                "selector": "a.pull-left > img"
             },
-            {
-                "url": "http://coolapk.com/apk/cn.zhj.hydrogenwallpager?t=comment&p={page:1}",
-                "title": "氢壁纸",
-                "cid": 3
+            "datetime": {
+                "fun": "html",
+                "selector": "div.media-body > div.media-heading > span.dateline"
+            },
+            "content": {
+                "fun": "html",
+                "selector": "div.media-body",
+                "regex":"</div>(.*)</div>"
+            },
+            "author": {
+                "fun": "attr",
+                "param": "data-username",
+                "selector": "this"
             }
-        ],
-        "flag": "preloadGallery|noRating|noTag|noTitle|waterfallAsList",
-        "galleryRule": { 
+        },
+        "pictureRule": {
             "item": {
                 "selector": "img.preview"
             },
-            "pictureThumbnail": {
+            "thumbnail": {
                 "fun": "attr",
                 "param": "src",
                 "regex": "(.*).m.jpg",
                 "replacement": "$1.s.jpg",
-                "selector": "img.preview"
+                "selector": "this"
             },
-            "pictureUrl": {
+            "url": {
                 "fun": "attr",
                 "param": "src",
-                "selector": "img.preview"
+                "selector": "this"
             }
+        }
+    },
+    "galleryUrl": "http://coolapk.com/feed/{idCode:}",
+    "indexRule": { 
+        "cover": {
+            "fun": "attr",
+            "param": "src",
+            "selector": "div.ex-card-extend > div > div.ex-card-thumbView > img"
         },
-        "galleryUrl": "http://coolapk.com/feed/{idCode:}",
-        "indexRule": { 
-            "cover": {
-                "fun": "attr",
-                "param": "src",
-                "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.ex-card-extend > div > div.ex-card-thumbView > img"
-            },
-            "item": {
-                "selector": "div.panel.panel-default.ex-card.ex-card-feed"
-            },
-            "datetime": {
-                "fun": "html",
-                "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > span.dateline > a"
-            },
-            "description": {
-                "fun": "html",
-                "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.ex-card-content"
-            },
-            "uploader": {
-                "fun": "html",
-                "selector": "div.panel.panel-default.ex-card.ex-card-feed > div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > a.username"
-            },
-            "idCode": {
-                "fun": "attr",
-                "param": "id",
-                "regex": "feed-(\\d*)",
-                "selector": "div.panel.panel-default.ex-card.ex-card-feed"
-            }
+        "item": {
+            "selector": "div.panel.panel-default.ex-card.ex-card-feed"
         },
-        "indexUrl": "http://coolapk.com/apk/com.by_syk.cooldp?t=comment&p={page:1}",
-        "sid": 1,
-        "title": "酷安评论"
-    }
+        "datetime": {
+            "fun": "html",
+            "selector": "div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > span.dateline > a"
+        },
+        "description": {
+            "fun": "html",
+            "selector": "div.ex-card-content"
+        },
+        "uploader": {
+            "fun": "html",
+            "selector": "div.panel-heading.media.ex-card-header.ex-card-mini-header > div.media-body > h4.media-heading > a.username"
+        },
+        "idCode": {
+            "fun": "attr",
+            "param": "id",
+            "regex": "feed-(\\d*)",
+            "selector": "this"
+        }
+    },
+    "indexUrl": "http://coolapk.com/apk/com.by_syk.cooldp?t=comment&p={page:1}",
+    "sid": 2,
+    "title": "酷安评论"
+}
