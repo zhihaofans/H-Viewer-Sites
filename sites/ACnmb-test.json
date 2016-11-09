@@ -1,0 +1,62 @@
+{
+    "categories": [
+        {
+            "url": "http://h.nimingban.com/Api/showf?id=13&page={page:1}",
+            "title": "Cosplay",
+            "cid": 1
+        },
+        {
+            "url": "http://h.nimingban.com/Api/showf?id=54&page={page:1}",
+            "title": "摄影",
+            "cid": 2
+        }
+    ],
+    "flag": "preloadGallery|noRating|waterfallAsList",
+    "galleryRule": {
+        "pictureRule": {
+            "item": {
+                "path": "$.replys[?(@.img!=="")]",
+            },
+            "thumbnail": {
+                "regex": "(.*)",
+                "replacement": "http://img1.nimingban.com/thumb/$1.jpg",
+                "path": "this"
+            },
+            "url": {
+                "regex": "(.*)",
+                "replacement": "http://img1.nimingban.com/image/$1.jpg",
+                "path": "this"
+            }
+        }
+    },
+    "galleryUrl": "http://h.nimingban.com/Api/thread?id={idCode:}&page=1{page:1}",
+    "indexRule": {
+        "cover": {
+            "regex": "(.*)",
+            "replacement": "http://img1.nimingban.com/image/$1.jpg",
+            "path": "$.img"
+        },
+        "idCode": {
+            "path": "$.id"
+        },
+        "item": {
+            "path": "$"
+        },
+        "datetime": {
+            "path": "$.now"
+        },
+        "upload": {
+            "path": "$.userid"
+        },
+        "description": {
+            "path": "$.content"
+        },
+        "title": {
+            "path": "$.title"
+        }
+    },
+    "indexUrl": "https://h.nimingban.com/Api/showf?id=13&page={page:1}",
+    "loginUrl": "https://h.nimingban.com/Api/getCookie",
+    "sid": 1,
+    "title": "AC匿名版"
+}
