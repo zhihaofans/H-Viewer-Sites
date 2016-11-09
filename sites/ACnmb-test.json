@@ -15,7 +15,7 @@
     "galleryRule": {
         "pictureRule": {
             "item": {
-                "path": "$.replys[?(@.img!=="")]",
+                "path": "$.replys[?(@.img!==\"\")]",
             },
             "thumbnail": {
                 "regex": "(.*)",
