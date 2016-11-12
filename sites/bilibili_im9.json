@@ -1,0 +1,72 @@
+{
+    "categories": [
+        {
+            "cid": 1,
+            "title": "Konachan动漫图库",
+            "url": "http://www.im9.com/api/query.community.post.list.do?community_id=10454&sort_type=1&ts=0&page_no={page:1}"
+        },
+        {
+            "cid": 2,
+            "title": "动漫美图秀",
+            "url": "http://www.im9.com/api/query.community.post.list.do?community_id=1268&sort_type=1&ts=0&page_no={page:1}"
+        },
+        {
+            "cid": 3,
+            "title": "壁纸墙",
+            "url": "http://www.im9.com/api/query.community.post.list.do?community_id=3209&sort_type=1&ts=0&page_no={page:1}"
+        },
+        {
+            "cid": 4,
+            "title": "手绘",
+            "url": "http://www.im9.com/api/query.community.post.list.do?community_id=937&sort_type=1&ts=0&page_no={page:1}"
+        }
+    ],
+    "flag": "noRating|waterfallAsList|jsNeededGallery",
+    "galleryRule": {
+        "pictureRule": {
+            "item": {
+                "selector": "div.info-context img"
+            },
+            "thumbnail": {
+                "fun": "attr",
+                "param": "src",
+                "regex": "(.*)",
+                "replacement": "$1@160w_90h_1e_1c_100Q",
+                "selector": "this"
+            },
+            "url": {
+                "fun": "attr",
+                "param": "src",
+                "selector": "this"
+            }
+        }
+    },
+    "galleryUrl": "{idCode:}#!page={page:1}",
+    "indexRule": {
+        "cover": {
+            "path": "$.post_image_list[0].image_url"
+        },
+        "idCode": {
+            "path": "$.post_url"
+        },
+        "item": {
+            "path": "$.data.post_list.result[?(@.image_count!=0)]"
+        },
+        "title": {
+            "path": "$.post_title"
+        },
+        "description": {
+            "path": "$.post_summary"
+        },
+        "uploader": {
+            "path": "$.author_name"
+        },
+        "tags": {
+            "path": "$.tags"
+        }
+    },
+    "indexUrl": "http://www.im9.com/api/query.community.post.list.do?community_id=10454&sort_type=1&ts=0&page_no={page:1}",
+    "loginUrl": "https://passport.bilibili.com/ajax/miniLogin/minilogin",
+    "sid": 3,
+    "title": "哔哩哔哩兴趣圈"
+}
