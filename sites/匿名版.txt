@@ -15,10 +15,7 @@
     "galleryRule": {
         "pictureRule": {
             "item": {
-                "path": [
-                    "$.replys[?(@.ext!='')].img",
-                    "$[?(@.ext!='')].img"
-                ]
+                "path": "$..img"
             },
             "thumbnail": {
                 "regex": "(.+)",
@@ -35,7 +32,7 @@
     "galleryUrl": "http://h.nimingban.com/Api/thread?id={idCode:}&page={page:1}",
     "indexRule": {
         "cover": {
-            "regex": "(.*)",
+            "regex": "(.+)",
             "replacement": "http://img1.nimingban.com/thumb/$1.jpg",
             "path": "$.img"
         },
